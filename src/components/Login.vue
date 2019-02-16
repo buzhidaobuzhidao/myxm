@@ -13,7 +13,7 @@
         </el-form-item>
         <el-form-item prop="password">
           <el-input v-model="loginForm.password">
-            <i slot="prefix" class="iconfont icon-xxhdpiCombinedShape"></i>
+            <i slot="prefix" class="iconfont icon-lock_fill"></i>
           </el-input>
         </el-form-item>
         <el-row>
@@ -32,8 +32,8 @@ export default {
   data() {
     return {
       loginForm: {
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
       },
       loginFormRules: {
         username: [
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     login() {
-      this.$refs.loginFormRef.validate(valid => {
+      this.$refs.loginFormRef.validate(async valid => {
         if (valid === true) {
           const { data: res } = await this.$http.post('/login', this.loginForm)
 
