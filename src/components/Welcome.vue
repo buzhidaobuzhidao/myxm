@@ -1,6 +1,6 @@
 <template>
     <div id="welcome">
-       <h2>Welcome to our site</h2>
+       <h2>欢迎来到  红浪漫!!!!!</h2>
     </div>
 </template>
 
